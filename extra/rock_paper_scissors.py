@@ -1,6 +1,7 @@
 import random
 
 choice = int(input("Enter the choice (1) for rock (2) for paper (3) for scissor :: "))
+print()
 
 rock = """
     _______
@@ -32,7 +33,7 @@ scissors = """
 game_images = [rock, paper, scissors]
 
 if choice == 1:
-    print("""
+    print("""You chose:
     _______
 ---'   ____)
       (_____)
@@ -41,7 +42,7 @@ if choice == 1:
 ---.__(___)
 """)
 elif choice == 2:
-    print("""
+    print("""You chose:
     _______
 ---'   ____)____
           ______)
@@ -51,7 +52,7 @@ elif choice == 2:
 """)
     
 elif choice == 3:
-    print("""
+    print("""You chose:
     _______
 ---'   ____)____
           ______)
@@ -62,9 +63,24 @@ elif choice == 3:
 else:
     print("Choose the right option.")
 
-computer_choice = random.choice(game_images)
+computer_choice = random.randint(1, 3)
 
-print(computer_choice)
+print("Computer chose:")
+print(game_images[computer_choice - 1])
 
-if computer_choice > choice:
+if choice == computer_choice:
+    print("It's a draw!")
+
+elif choice == 1 and computer_choice == 3:
+    print("You win!")
+
+elif choice == 2 and computer_choice == 1:
+    print("You win!")
+
+elif choice == 3 and computer_choice == 2:
+    print("You win!")
+
+else:
     print("Computer wins!")
+
+
