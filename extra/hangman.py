@@ -2,7 +2,7 @@ import random
 
 print()
 print("Welcome To The Hangman Game !!")
-print(r"""
+print("""
  _   _      _      _   _    ____   __  __    _    _   _
 | | | |    / \    | \ | |  / ___| |  \/  |  / \  | \ | |
 | |_| |   / _ \   |  \| | | |  _  | |\/| | / _ \ |  \| |
@@ -37,13 +37,77 @@ word_list = [
 def get_random_word(word_bank):
     return random.choice(word_bank)
 
-chosen_word = get_random_word(word_list)
+chosen_word = get_random_word(word_list)       
 print(chosen_word)
-guess = input("Guess a letter :: ").lower()
 
-for letter in chosen_word:
-    if letter == guess:
-        print("right")
-    else:
-        print("wrong")
+print()
+print()
 
+
+count = 1
+life = 6
+
+print("Word to guess:: ")
+print()
+
+for i in range(len(chosen_word)):
+    print("_", end = " ")
+
+word_guess = []
+
+for i in range(len(chosen_word)):
+    word_guess.append("_")
+
+while life > 0:
+
+    display = ""
+    print()
+    guess = input("Guess a letter :: ").lower()
+
+    for letter in range(len(chosen_word)):
+        if chosen_word[letter] == guess:
+            word_guess[letter] = guess
+            display += chosen_word[letter]
+        
+            # print(letter)
+            # for guess in chosen_word:
+            #     if letter == guess:
+            #         print(letter)
+            #     else:
+            #         print("_")
+        else:
+            display += "_"
+    
+    print(" ".join(word_guess))
+
+#     Start
+
+# Lives = 6
+
+# While lives > 0
+
+#     1. Show the current word
+#        Example:
+#        Word to guess: a_____
+
+#     2. Ask the user for ONE letter
+#        Guess a letter:
+
+#     3. Check if the letter is in the hidden word.
+
+#         If YES
+#             Reveal all matching letters.
+#             Example:
+#             a__l_
+
+#             If the whole word is revealed
+#                 You Win
+#                 Stop
+
+#         If NO
+#             Lose one life.
+#             Show the next Hangman picture.
+
+#     4. Show how many lives are left.
+
+# Repeat
