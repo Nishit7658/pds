@@ -20,5 +20,5 @@ if not os.path.exists("student.csv"):
 with open("student.csv", "r") as f:
     reade_csv = csv.reader(f)
     for cpi in reade_csv:
-        if cpi[2] > 7.5:
+        if cpi[0] != "Name" and float(cpi[2]) > 7.5:
             print(cpi[2])
