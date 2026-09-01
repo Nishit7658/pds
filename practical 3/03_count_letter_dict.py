@@ -1,15 +1,16 @@
 # Write a program to count the frequency of each character in a given string
 # using a Dictionary.
 
-str_input = str(input("Enter the string you want to count the frequency of character :: "))
+str_input = input("Enter the string you want to count the frequency of character :: ")
 
-for i in str_input:
-    values = dict(i)
+char_frequency = {}
 
-count = 0
+for char in str_input:
+    if char in char_frequency:
+        char_frequency[char] += 1
+    else:
+        char_frequency[char] = 1
 
-for i in values:
-    if  == i:
-        count += 1
-
-print(count)        
+print("\nCharacter frequencies:")
+for char, count in char_frequency.items():
+    print(f"'{char}': {count}")
