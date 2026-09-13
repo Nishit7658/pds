@@ -1,0 +1,17 @@
+[
+    {
+        "Title" : "Minecraft",
+        "Author" : "Java",
+        "Price" : 88
+    },
+    {
+        "Title" : "Harry porter",
+        "Author" : "Nelson Mendela",
+        "Price" : 67
+    },
+    {
+        "Title" : "GTU",
+        "Author" : "No One",
+        "Price" : 0.6767
+    }
+]
