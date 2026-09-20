@@ -1,0 +1,17 @@
+Region,Salesperson,Product,Sales,Profit
+North,Nick,Electronics,12000,2500
+North,Rock,Furniture,8500,1200
+South,Nicky,Electronics,15000,3200
+South,Rockety,Clothing,6000,900
+East,Nick,Clothing,9000,1800
+East,Rock,Electronics,11000,2200
+West,Nicky,Furniture,14000,2900
+West,Rockety,Electronics,17500,3600
+North,Nick,Clothing,7000,1100
+South,Rock,Furniture,9500,1500
+East,Rockety,Clothing,8000,1300
+West,Nick,Electronics,13000,2700
+North,Nicky,Furniture,10500,1900
+South,Alice,Electronics,16000,3400
+East,Alice,Furniture,12500,2100
+West,Alice,Clothing,9200,1600
