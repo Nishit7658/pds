@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^@\\(\"80 90 70\", \"75 88\"\\) \\| python \"practical 4\\\\02_score\\.py\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
