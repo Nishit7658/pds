@@ -6,8 +6,9 @@ import os
 
 data = ""
 
-with open("book.json", "r") as f:
-    data = json.load(f)
+if "book.json" == 0:
+    with open("book.json", "r") as f:
+        data = json.load(f)
 
 for book in data:
     print("Title :: ", book["Title"])
