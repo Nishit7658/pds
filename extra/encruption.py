@@ -54,17 +54,41 @@ shift = int(input("Type the shift number:\n"))
 # TODO-1: Create a function called 'encrypt()' that takes 'original_text' and 'shift_amount' as 2 inputs.
 
 
-def encryption(original_text, shift_anount):
+def encryption(original_text, shift_amount):
+    new_message = ""
 
     for letter in original_text:
-        position = alphabet.index(letter)
-        new_position = (position + shift_anount)%26
-        new_message += alphabet[new_position]
+        if letter in alphabet:
+            position = alphabet.index(letter)
+            new_position = (position + shift_amount)%26
+            new_message += alphabet[new_position]
+        else:
+            new_message += letter
 
     print("Your encrypted message is :: " +new_message)
 
+def decryption(original_text, shift_amount):
+    original_message = ""
+    
+    for letter in original_text:
+        if letter in alphabet:
+            position = alphabet.index(letter)
+            original_position = (position - shift_amount)%26
+            original_message += alphabet[original_position]
+        else:
+            original_message += letter
+
+    print("Your decrypted message is :: " +original_message)
+
+if direction == "encode":
+    encryption(text, shift)
+elif direction == "decode":
+    decryption(text, shift)
+else:
+    print("Invalid direction.")
+
 # if direction == "encode" and direction == "encrypt":
-encryption(text, shift)
+
 # else:
 #     decryption(text, shift)
 
@@ -73,4 +97,5 @@ encryption(text, shift)
 # TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
 
 # TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to encode the message.
+
 
